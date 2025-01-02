@@ -7,8 +7,9 @@ addTask = str()
 addDate = float()
  
 def toDoList():
-    newVaules == "Y"
-    while newVaules == "Y":
+    keep_Going = True
+    
+    while keep_Going:
         try:
             addTask = str(input(" Input Task "))      #user input
             addDate = float(input("date of Task "))     #date task is due
@@ -18,7 +19,7 @@ def toDoList():
             print("ERROR")
         else:    
             print(Task)         
-    newVaules = input("Do you wnant to add another Task? Y or N ")
+        newVaules = input("Do you wnant to add another Task? Y or N ")
         if newVaules == "Y" or "y":
             continue
         elif newVaules == "N" or "n":
