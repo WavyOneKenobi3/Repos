@@ -32,12 +32,7 @@ def delete_list():
  #Display list
 def display_list():
     print(To_Do_List)
-    newVaules = input("Do you wnant to add another Task? Y or N ")
-    
-    
-def quit_list():
-    print("Ending program")
-    sys.exit()
+
 
 def play():  
     while True:
