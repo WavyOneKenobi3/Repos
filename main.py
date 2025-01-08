@@ -2,10 +2,9 @@
 
 #array for the the to-do list 
 To_Do_List = {}
+
 print("To-Do List\n")
 print("Welcome to Your To-Do list app. ")
-print("Select an option")
-
 
  
  #Add item to list (in array)
@@ -17,34 +16,30 @@ def add_list():
  #delete item off list (in array)
 def delete_list():                                          
     task = input("Delete Task: ")
-    Date_Task = input("Delete Date: ")
-    item_to_remove = {"Task": task, "Date": Date_Task}
-    if item_to_remove in To_Do_List:                                #still having errors with this statement
-        To_Do_List.remove(item_to_remove)
+    if task in To_Do_List:                               
+        del To_Do_List[task]
         print("Task removed.")
     else:
         print("Task not found in the list.")
-    
- #Display list
-def display_list():
-    print(To_Do_List)
 
 
 def play():  
     while True:
+        print("Select an option")
         user_input = input("1. Add Task \n2. Delete Task\n3. Show List\n4. Quit\n").strip() 
         if user_input == "1":
             add_list()
         elif user_input == "2":
             delete_list()
         elif user_input == "3":
-            display_list()
+            print(To_Do_List)
         elif user_input == "4":
             print("Ending Program")
             break
         else:
             print("Invalid option. Please try again.")
             
+
 
 
 
